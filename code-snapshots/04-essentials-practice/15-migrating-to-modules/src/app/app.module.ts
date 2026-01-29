@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, provideZonelessChangeDetection } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -9,5 +9,6 @@ import { UserInputModule } from './user-input/user-input.module';
   declarations: [AppComponent, HeaderComponent, InvestmentResultsComponent],
   imports: [BrowserModule, UserInputModule],
   bootstrap: [AppComponent],
+  providers: [provideZonelessChangeDetection()],
 })
 export class AppModule {}

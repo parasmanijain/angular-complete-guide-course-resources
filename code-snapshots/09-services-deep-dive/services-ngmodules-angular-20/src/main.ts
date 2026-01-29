@@ -1,8 +1,8 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { platformBrowser } from '@angular/platform-browser';
 
 import { AppModule } from './app/app.module';
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+platformBrowser().bootstrapModule(AppModule);
 
 // bootstrapApplication(AppComponent, {
 //   providers: [{ provide: TasksServiceToken, useClass: TasksService }],
