@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 // import { TasksService } from './tasks.service';
 
 @Component({
-  selector: 'app-tasks',
-  templateUrl: './tasks.component.html',
-  // providers: [TasksService]
+    selector: 'app-tasks',
+    templateUrl: './tasks.component.html',
+    standalone: false
 })
 export class TasksComponent {}

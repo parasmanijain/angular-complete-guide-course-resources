@@ -4,9 +4,10 @@ import { TASK_STATUS_OPTIONS, Task, TaskStatus } from '../../task.model';
 import { TasksServiceToken } from '../../../app.module';
 
 @Component({
-  selector: 'app-task-item',
-  templateUrl: './task-item.component.html',
-  styleUrl: './task-item.component.css',
+    selector: 'app-task-item',
+    templateUrl: './task-item.component.html',
+    styleUrl: './task-item.component.css',
+    standalone: false
 })
 export class TaskItemComponent {
   private tasksService = inject(TasksServiceToken);
