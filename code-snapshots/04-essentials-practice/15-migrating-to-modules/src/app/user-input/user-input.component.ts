@@ -6,6 +6,7 @@ import { InvestmentService } from '../investment.service';
   selector: 'app-user-input',
   templateUrl: './user-input.component.html',
   styleUrl: './user-input.component.css',
+  standalone: false,
 })
 export class UserInputComponent {
   enteredInitialInvestment = signal('0');
