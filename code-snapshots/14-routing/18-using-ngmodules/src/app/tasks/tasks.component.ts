@@ -9,9 +9,10 @@ import { TasksService } from './tasks.service';
 import { Task } from './task/task.model';
 
 @Component({
-  selector: 'app-tasks',
-  templateUrl: './tasks.component.html',
-  styleUrl: './tasks.component.css',
+    selector: 'app-tasks',
+    templateUrl: './tasks.component.html',
+    styleUrl: './tasks.component.css',
+    standalone: false
 })
 export class TasksComponent {
   userTasks = input.required<Task[]>();
