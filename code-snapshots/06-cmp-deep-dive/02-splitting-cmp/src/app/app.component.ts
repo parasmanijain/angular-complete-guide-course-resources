@@ -7,7 +7,6 @@ import { TicketsComponent } from './dashboard/tickets/tickets.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
   imports: [
     HeaderComponent,
     ServerStatusComponent,

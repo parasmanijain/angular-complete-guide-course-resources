@@ -12,7 +12,6 @@ function mustContainQuestionMark(control: AbstractControl) {
   if (control.value.includes('?')) {
     return null;
   }
-
   return { doesNotContainQuestionMark: true };
 }
 
@@ -20,13 +19,11 @@ function emailIsUnique(control: AbstractControl) {
   if (control.value !== 'test@example.com') {
     return of(null);
   }
-
   return of({ notUnique: true });
 }
 
 @Component({
   selector: 'app-login',
-  standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
@@ -45,7 +42,6 @@ export class LoginComponent {
       ],
     }),
   });
-
   get emailIsInvalid() {
     return (
       this.form.controls.email.touched &&
@@ -53,7 +49,6 @@ export class LoginComponent {
       this.form.controls.email.invalid
     );
   }
-
   get passwordIsInvalid() {
     return (
       this.form.controls.password.touched &&
@@ -61,7 +56,6 @@ export class LoginComponent {
       this.form.controls.password.invalid
     );
   }
-
   onSubmit() {
     console.log(this.form);
     const enteredEmail = this.form.value.email;

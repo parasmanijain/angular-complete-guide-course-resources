@@ -6,7 +6,7 @@ const OFFER_TIME = 30;
 
 @Component({
   selector: 'app-offer-preview',
-  standalone: true,
+  
   imports: [AsyncPipe],
   templateUrl: './offer-preview.component.html',
   styleUrl: './offer-preview.component.css',

@@ -7,13 +7,12 @@ import { ErrorModalComponent } from './shared/modal/error-modal/error-modal.comp
 
 @Component({
   selector: 'app-root',
-  standalone: true,
+
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   imports: [AvailablePlacesComponent, UserPlacesComponent, ErrorModalComponent],
 })
 export class AppComponent {
   private errorService = inject(ErrorService);
-
   error = this.errorService.error;
 }

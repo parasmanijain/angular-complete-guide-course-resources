@@ -15,7 +15,6 @@ import {
 
 @Component({
   selector: 'app-control',
-  standalone: true,
   imports: [],
   templateUrl: './control.component.html',
   styleUrl: './control.component.css',
@@ -37,21 +36,17 @@ export class ControlComponent implements AfterContentInit {
   // >;
   private control =
     contentChild<ElementRef<HTMLInputElement | HTMLTextAreaElement>>('input');
-
   constructor() {
     afterRender(() => {
       console.log('afterRender');
     });
-
     afterNextRender(() => {
       console.log('afterNextRender');
     });
   }
-
   ngAfterContentInit() {
     // ...
   }
-
   onClick() {
     console.log('Clicked!');
     console.log(this.el);

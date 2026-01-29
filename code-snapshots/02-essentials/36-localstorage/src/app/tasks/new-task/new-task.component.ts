@@ -6,7 +6,6 @@ import { TasksService } from '../tasks.service';
 
 @Component({
   selector: 'app-new-task',
-  standalone: true,
   imports: [FormsModule],
   templateUrl: './new-task.component.html',
   styleUrl: './new-task.component.css',
@@ -18,11 +17,9 @@ export class NewTaskComponent {
   enteredSummary = '';
   enteredDate = '';
   private tasksService = inject(TasksService);
-
   onCancel() {
     this.close.emit();
   }
-
   onSubmit() {
     this.tasksService.addTask(
       {
@@ -30,7 +27,7 @@ export class NewTaskComponent {
         summary: this.enteredSummary,
         date: this.enteredDate,
       },
-      this.userId
+      this.userId,
     );
     this.close.emit();
   }

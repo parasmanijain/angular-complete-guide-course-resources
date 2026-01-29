@@ -10,11 +10,7 @@ import { TasksServiceToken } from '../../app.module';
     standalone: false
 })
 export class NewTaskComponent {
-  private formEl = viewChild<ElementRef<HTMLFormElement>>('form');
-
-  constructor(@Inject(TasksServiceToken) private tasksService: TasksService) {}
-
-  onAddTask(title: string, description: string) {
+  private formEl = viewChild<ElementRef<HTMLFormElement>>('form');constructor(@Inject(TasksServiceToken) private tasksService: TasksService) {}onAddTask(title: string, description: string) {
     this.tasksService.addTask({ title, description });
     this.formEl()?.nativeElement.reset();
   }

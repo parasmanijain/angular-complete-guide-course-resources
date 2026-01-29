@@ -5,7 +5,7 @@ import { TasksService } from '../tasks.service';
 
 @Component({
   selector: 'app-new-task',
-  standalone: true,
+  
   imports: [FormsModule],
   templateUrl: './new-task.component.html',
   styleUrl: './new-task.component.css',
@@ -15,9 +15,7 @@ export class NewTaskComponent {
   enteredTitle = signal('');
   enteredSummary = signal('');
   enteredDate = signal('');
-  private tasksService = inject(TasksService);
-
-  onSubmit() {
+  private tasksService = inject(TasksService);onSubmit() {
     this.tasksService.addTask(
       {
         title: this.enteredTitle(),

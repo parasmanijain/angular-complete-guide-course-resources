@@ -1,9 +1,7 @@
 import { Component, Input, input } from '@angular/core';
 
 @Component({
-  selector: 'app-investment-results',
-  standalone: true,
-  imports: [],
+  selector: 'app-investment-results',imports: [],
   templateUrl: './investment-results.component.html',
   styleUrl: './investment-results.component.css',
 })

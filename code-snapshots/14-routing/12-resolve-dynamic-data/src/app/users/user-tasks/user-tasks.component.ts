@@ -11,7 +11,7 @@ import { UsersService } from '../users.service';
 
 @Component({
   selector: 'app-user-tasks',
-  standalone: true,
+  
   imports: [RouterOutlet, RouterLink],
   templateUrl: './user-tasks.component.html',
   styleUrl: './user-tasks.component.css',

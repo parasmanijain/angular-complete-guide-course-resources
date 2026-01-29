@@ -6,14 +6,12 @@ import { DUMMY_USERS } from './dummy-users';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   imports: [HeaderComponent, UserComponent],
 })
 export class AppComponent {
   users = DUMMY_USERS;
-
   onSelectUser(id: string) {
     console.log('Selected user with id ' + id);
   }

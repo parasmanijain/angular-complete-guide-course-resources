@@ -30,13 +30,9 @@ export const resolveUserTasks: ResolveFn<Task[]> = (
     .allTasks()
     .filter(
       (task) => task.userId === activatedRouteSnapshot.paramMap.get('userId')
-    );
-
-  if (order && order === 'asc') {
+    );if (order && order === 'asc') {
     tasks.sort((a, b) => (a.id > b.id ? 1 : -1));
   } else {
     tasks.sort((a, b) => (a.id > b.id ? -1 : 1));
-  }
-
-  return tasks.length ? tasks : [];
+  }return tasks.length ? tasks : [];
 };

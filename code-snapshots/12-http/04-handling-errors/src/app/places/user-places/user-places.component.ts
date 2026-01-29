@@ -5,7 +5,7 @@ import { PlacesComponent } from '../places.component';
 
 @Component({
   selector: 'app-user-places',
-  standalone: true,
+  
   templateUrl: './user-places.component.html',
   styleUrl: './user-places.component.css',
   imports: [PlacesContainerComponent, PlacesComponent],

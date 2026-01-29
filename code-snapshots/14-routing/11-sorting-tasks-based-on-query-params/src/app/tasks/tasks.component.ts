@@ -14,7 +14,7 @@ import { TasksService } from './tasks.service';
 
 @Component({
   selector: 'app-tasks',
-  standalone: true,
+  
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.css',
   imports: [TaskComponent, RouterLink],
@@ -37,13 +37,9 @@ export class TasksComponent implements OnInit {
       })
   );
   private activatedRoute = inject(ActivatedRoute);
-  private destroyRef = inject(DestroyRef);
-
-  ngOnInit(): void {
+  private destroyRef = inject(DestroyRef);ngOnInit(): void {
     const subscription = this.activatedRoute.queryParams.subscribe({
       next: (params) => this.order.set(params['order']),
-    });
-
-    this.destroyRef.onDestroy(() => subscription.unsubscribe());
+    });  this.destroyRef.onDestroy(() => subscription.unsubscribe());
   }
 }

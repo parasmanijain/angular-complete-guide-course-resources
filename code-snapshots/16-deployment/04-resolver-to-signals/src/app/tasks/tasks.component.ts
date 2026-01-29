@@ -8,7 +8,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-tasks',
-  standalone: true,
+
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.css',
   imports: [TaskComponent, RouterLink],
@@ -22,13 +22,11 @@ export class TasksComponent {
     const tasks = this.tasksService
       .allTasks()
       .filter((task) => task.userId === this.paramMap()?.get('userId'));
-
     if (this.order() && this.order() === 'asc') {
       tasks.sort((a, b) => (a.id > b.id ? 1 : -1));
     } else {
       tasks.sort((a, b) => (a.id > b.id ? -1 : 1));
     }
-
     return tasks.length ? tasks : [];
   });
   userId = input.required<string>();

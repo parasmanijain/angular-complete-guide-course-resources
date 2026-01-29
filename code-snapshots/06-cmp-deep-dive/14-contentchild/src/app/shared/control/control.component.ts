@@ -12,7 +12,6 @@ import {
 
 @Component({
   selector: 'app-control',
-  standalone: true,
   imports: [],
   templateUrl: './control.component.html',
   styleUrl: './control.component.css',
@@ -34,7 +33,6 @@ export class ControlComponent {
   // >;
   private control =
     contentChild<ElementRef<HTMLInputElement | HTMLTextAreaElement>>('input');
-
   onClick() {
     console.log('Clicked!');
     console.log(this.el);

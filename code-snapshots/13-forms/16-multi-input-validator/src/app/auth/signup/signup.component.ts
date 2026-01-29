@@ -12,18 +12,15 @@ function equalValues(controlName1: string, controlName2: string) {
   return (control: AbstractControl) => {
     const val1 = control.get(controlName1)?.value;
     const val2 = control.get(controlName2)?.value;
-
     if (val1 === val2) {
       return null;
     }
-
     return { valuesNotEqual: true };
   };
 }
 
 @Component({
   selector: 'app-signup',
-  standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css',
@@ -44,7 +41,7 @@ export class SignupComponent {
       },
       {
         validators: [equalValues('password', 'confirmPassword')],
-      }
+      },
     ),
     firstName: new FormControl('', { validators: [Validators.required] }),
     lastName: new FormControl('', { validators: [Validators.required] }),
@@ -64,16 +61,13 @@ export class SignupComponent {
     ]),
     agree: new FormControl(false, { validators: [Validators.required] }),
   });
-
   onSubmit() {
     if (this.form.invalid) {
       console.log('INVALID FORM');
       return;
     }
-
     console.log(this.form);
   }
-
   onReset() {
     this.form.reset();
   }

@@ -3,7 +3,6 @@ import { TaskComponent } from './task/task.component';
 
 @Component({
   selector: 'app-tasks',
-  standalone: true,
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.css',
   imports: [TaskComponent],
@@ -36,11 +35,9 @@ export class TasksComponent {
       dueDate: '2024-06-15',
     },
   ];
-
   get selectedUserTasks() {
     return this.tasks.filter((task) => task.userId === this.userId);
   }
-
   onCompleteTask(id: string) {
     this.tasks = this.tasks.filter((task) => task.id !== id);
   }

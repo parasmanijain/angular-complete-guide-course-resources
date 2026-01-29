@@ -9,7 +9,5 @@ import { InvestmentService } from '../investment.service';
   standalone: false,
 })
 export class InvestmentResultsComponent {
-  private investmentService = inject(InvestmentService);
-
-  results = computed(() => this.investmentService.resultData());
+  private investmentService = inject(InvestmentService);results = computed(() => this.investmentService.resultData());
 }

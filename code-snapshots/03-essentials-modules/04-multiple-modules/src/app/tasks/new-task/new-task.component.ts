@@ -14,13 +14,9 @@ export class NewTaskComponent {
   enteredTitle = '';
   enteredSummary = '';
   enteredDate = '';
-  private tasksService = inject(TasksService);
-
-  onCancel() {
+  private tasksService = inject(TasksService);onCancel() {
     this.close.emit();
-  }
-
-  onSubmit() {
+  }onSubmit() {
     this.tasksService.addTask(
       {
         title: this.enteredTitle,

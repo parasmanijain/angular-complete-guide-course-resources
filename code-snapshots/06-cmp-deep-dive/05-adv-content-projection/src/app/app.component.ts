@@ -8,7 +8,7 @@ import { DashboardItemComponent } from './dashboard/dashboard-item/dashboard-ite
 
 @Component({
   selector: 'app-root',
-  standalone: true,
+  
   imports: [
     HeaderComponent,
     ServerStatusComponent,

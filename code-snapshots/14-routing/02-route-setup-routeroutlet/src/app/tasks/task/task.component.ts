@@ -7,16 +7,14 @@ import { TasksService } from '../tasks.service';
 
 @Component({
   selector: 'app-task',
-  standalone: true,
+  
   templateUrl: './task.component.html',
   styleUrl: './task.component.css',
   imports: [DatePipe, CardComponent],
 })
 export class TaskComponent {
   task = input.required<Task>();
-  private tasksService = inject(TasksService);
-
-  onComplete() {
+  private tasksService = inject(TasksService);onComplete() {
     this.tasksService.removeTask(this.task().id);
   }
 }

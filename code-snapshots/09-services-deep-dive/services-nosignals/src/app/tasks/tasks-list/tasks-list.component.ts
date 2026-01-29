@@ -6,7 +6,7 @@ import { TASK_STATUS_OPTIONS, taskStatusOptionsProvider } from '../task.model';
 
 @Component({
   selector: 'app-tasks-list',
-  standalone: true,
+  
   templateUrl: './tasks-list.component.html',
   styleUrl: './tasks-list.component.css',
   imports: [TaskItemComponent],
@@ -33,9 +33,7 @@ export class TasksListComponent {
       default:
         return this.tasksService.allTasks;
     }
-  }
-
-  onChangeTasksFilter(filter: string) {
+  }onChangeTasksFilter(filter: string) {
     this.selectedFilter = filter;
   }
 }

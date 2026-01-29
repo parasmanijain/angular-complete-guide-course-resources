@@ -6,7 +6,7 @@ import { TasksServiceToken } from '../../../../main';
 
 @Component({
   selector: 'app-task-item',
-  standalone: true,
+  
   imports: [FormsModule],
   templateUrl: './task-item.component.html',
   styleUrl: './task-item.component.css',
@@ -14,9 +14,7 @@ import { TasksServiceToken } from '../../../../main';
 export class TaskItemComponent {
   private tasksService = inject(TasksServiceToken);
   taskStatusOptions = inject(TASK_STATUS_OPTIONS);
-  @Input({ required: true }) task!: Task;
-
-  get taskStatus() {
+  @Input({ required: true }) task!: Task;get taskStatus() {
     switch (this.task.status) {
       case 'OPEN':
         return 'Open';
@@ -27,12 +25,8 @@ export class TaskItemComponent {
       default:
         return 'Open';
     }
-  }
-
-  onChangeTaskStatus(taskId: string, status: string) {
-    let newStatus: TaskStatus = 'OPEN';
-
-    switch (status) {
+  }onChangeTaskStatus(taskId: string, status: string) {
+    let newStatus: TaskStatus = 'OPEN';  switch (status) {
       case 'open':
         newStatus = 'OPEN';
         break;
@@ -44,8 +38,6 @@ export class TaskItemComponent {
         break;
       default:
         break;
-    }
-
-    this.tasksService.updateTaskStatus(taskId, newStatus);
+    }  this.tasksService.updateTaskStatus(taskId, newStatus);
   }
 }

@@ -1,15 +1,14 @@
 import { AfterViewInit, Component, ElementRef, viewChild } from '@angular/core';
 
 @Component({
-    selector: 'app-modal',
-    templateUrl: './modal.component.html',
-    styleUrl: './modal.component.css',
-    standalone: false
+  selector: 'app-modal',
+  templateUrl: './modal.component.html',
+  styleUrl: './modal.component.css',
+  standalone: false,
 })
 export class ModalComponent implements AfterViewInit {
   private dialogEl =
     viewChild.required<ElementRef<HTMLDialogElement>>('dialog');
-
   ngAfterViewInit(): void {
     this.dialogEl().nativeElement.showModal();
   }

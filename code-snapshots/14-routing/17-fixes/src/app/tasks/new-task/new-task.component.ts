@@ -6,7 +6,7 @@ import { TasksService } from '../tasks.service';
 
 @Component({
   selector: 'app-new-task',
-  standalone: true,
+  
   imports: [FormsModule, RouterLink],
   templateUrl: './new-task.component.html',
   styleUrl: './new-task.component.css',
@@ -18,9 +18,7 @@ export class NewTaskComponent {
   enteredDate = signal('');
   submitted = false;
   private tasksService = inject(TasksService);
-  private router = inject(Router);
-
-  onSubmit() {
+  private router = inject(Router);onSubmit() {
     this.tasksService.addTask(
       {
         title: this.enteredTitle(),
@@ -29,9 +27,7 @@ export class NewTaskComponent {
       },
       this.userId()
     );
-    this.submitted = true;
-
-    this.router.navigate(['/users', this.userId(), 'tasks'], {
+    this.submitted = true;  this.router.navigate(['/users', this.userId(), 'tasks'], {
       replaceUrl: true,
     });
   }

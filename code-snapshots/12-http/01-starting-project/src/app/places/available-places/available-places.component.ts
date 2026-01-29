@@ -6,7 +6,7 @@ import { PlacesContainerComponent } from '../places-container/places-container.c
 
 @Component({
   selector: 'app-available-places',
-  standalone: true,
+  
   templateUrl: './available-places.component.html',
   styleUrl: './available-places.component.css',
   imports: [PlacesComponent, PlacesContainerComponent],

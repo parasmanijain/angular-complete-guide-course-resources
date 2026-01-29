@@ -9,7 +9,5 @@ import { type User } from './user.model';
     standalone: false
 })
 export class UserComponent {
-  user = input.required<User>();
-
-  imagePath = computed(() => 'users/' + this.user().avatar);
+  user = input.required<User>();imagePath = computed(() => 'users/' + this.user().avatar);
 }

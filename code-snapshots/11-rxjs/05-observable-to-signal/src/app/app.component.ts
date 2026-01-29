@@ -13,7 +13,7 @@ import { interval, map } from 'rxjs';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
+  
   templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
@@ -23,15 +23,11 @@ export class AppComponent implements OnInit {
   intervalSignal = toSignal(this.interval$, { initialValue: 0 });
   // interval = signal(0);
   // doubleInterval = computed(() => this.interval() * 2);
-  private destroyRef = inject(DestroyRef);
-
-  constructor() {
+  private destroyRef = inject(DestroyRef);constructor() {
     // effect(() => {
     //   console.log(`Clicked button ${this.clickCount()} times.`);
     // });
-  }
-
-  ngOnInit(): void {
+  }ngOnInit(): void {
     // setInterval(() => {
     //   this.interval.update(prevIntervalNumber => prevIntervalNumber + 1);
     //   // update some signal
@@ -50,9 +46,7 @@ export class AppComponent implements OnInit {
     this.destroyRef.onDestroy(() => {
       subscription.unsubscribe();
     });
-  }
-
-  onClick() {
+  }onClick() {
     this.clickCount.update((prevCount) => prevCount + 1);
   }
 }

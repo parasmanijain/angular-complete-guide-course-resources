@@ -31,9 +31,7 @@ export class TasksListComponent {
       default:
         return this.tasksService.allTasks();
     }
-  });
-
-  onChangeTasksFilter(filter: string) {
+  });onChangeTasksFilter(filter: string) {
     this.selectedFilter.set(filter);
   }
 }

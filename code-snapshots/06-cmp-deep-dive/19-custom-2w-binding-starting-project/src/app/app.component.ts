@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
+  
   templateUrl: './app.component.html',
   imports: [RectComponent, FormsModule],
 })

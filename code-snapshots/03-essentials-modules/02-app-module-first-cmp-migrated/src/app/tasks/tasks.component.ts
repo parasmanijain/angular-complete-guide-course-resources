@@ -6,7 +6,7 @@ import { TasksService } from './tasks.service';
 
 @Component({
   selector: 'app-tasks',
-  standalone: true,
+  
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.css',
   imports: [TaskComponent, NewTaskComponent],
@@ -14,19 +14,11 @@ import { TasksService } from './tasks.service';
 export class TasksComponent {
   @Input({ required: true }) userId!: string;
   @Input({ required: true }) name!: string;
-  isAddingTask = false;
-
-  constructor(private tasksService: TasksService) {}
-
-  get selectedUserTasks() {
+  isAddingTask = false;constructor(private tasksService: TasksService) {}get selectedUserTasks() {
     return this.tasksService.getUserTasks(this.userId);
-  }
-
-  onStartAddTask() {
+  }onStartAddTask() {
     this.isAddingTask = true;
-  }
-
-  onCloseAddTask() {
+  }onCloseAddTask() {
     this.isAddingTask = false;
   }
 }

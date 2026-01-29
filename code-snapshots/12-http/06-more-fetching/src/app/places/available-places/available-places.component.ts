@@ -8,7 +8,7 @@ import { PlacesContainerComponent } from '../places-container/places-container.c
 
 @Component({
   selector: 'app-available-places',
-  standalone: true,
+  
   templateUrl: './available-places.component.html',
   styleUrl: './available-places.component.css',
   imports: [PlacesComponent, PlacesContainerComponent],
@@ -18,11 +18,7 @@ export class AvailablePlacesComponent implements OnInit {
   isFetching = signal(false);
   error = signal('');
   private httpClient = inject(HttpClient);
-  private destroyRef = inject(DestroyRef);
-
-  // constructor(private httpClient: HttpClient) {}
-
-  ngOnInit() {
+  private destroyRef = inject(DestroyRef);// constructor(private httpClient: HttpClient) {}ngOnInit() {
     this.isFetching.set(true);
     const subscription = this.httpClient
       .get<{ places: Place[] }>('http://localhost:3000/places')
@@ -48,14 +44,10 @@ export class AvailablePlacesComponent implements OnInit {
         complete: () => {
           this.isFetching.set(false);
         },
-      });
-
-    this.destroyRef.onDestroy(() => {
+      });  this.destroyRef.onDestroy(() => {
       subscription.unsubscribe();
     });
-  }
-
-  onSelectPlace(selectedPlace: Place) {
+  }onSelectPlace(selectedPlace: Place) {
     this.httpClient
       .put('http://localhost:3000/user-places', {
         placeId: selectedPlace.id,

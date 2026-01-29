@@ -8,7 +8,7 @@ import { Place } from '../place.model';
 
 @Component({
   selector: 'app-user-places',
-  standalone: true,
+
   templateUrl: './user-places.component.html',
   styleUrl: './user-places.component.css',
   imports: [PlacesContainerComponent, PlacesComponent],
@@ -19,7 +19,6 @@ export class UserPlacesComponent implements OnInit {
   error = signal('');
   private httpClient = inject(HttpClient);
   private destroyRef = inject(DestroyRef);
-
   ngOnInit() {
     this.isFetching.set(true);
     const subscription = this.httpClient
@@ -31,10 +30,10 @@ export class UserPlacesComponent implements OnInit {
           return throwError(
             () =>
               new Error(
-                'Something went wrong fetching your favorite places. Please try again later.'
-              )
+                'Something went wrong fetching your favorite places. Please try again later.',
+              ),
           );
-        })
+        }),
       )
       .subscribe({
         next: (places) => {
@@ -47,7 +46,6 @@ export class UserPlacesComponent implements OnInit {
           this.isFetching.set(false);
         },
       });
-
     this.destroyRef.onDestroy(() => {
       subscription.unsubscribe();
     });

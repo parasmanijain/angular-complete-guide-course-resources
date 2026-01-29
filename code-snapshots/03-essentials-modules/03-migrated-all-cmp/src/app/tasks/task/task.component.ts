@@ -11,9 +11,7 @@ import { TasksService } from '../tasks.service';
 })
 export class TaskComponent {
   @Input({ required: true }) task!: Task;
-  private tasksService = inject(TasksService);
-
-  onCompleteTask() {
+  private tasksService = inject(TasksService);onCompleteTask() {
     this.tasksService.removeTask(this.task.id);
   }
 }

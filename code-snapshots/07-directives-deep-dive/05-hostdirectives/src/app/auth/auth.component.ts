@@ -5,19 +5,15 @@ import { AuthService } from './auth.service';
 import { LogDirective } from '../log.directive';
 
 @Component({
-  selector: 'app-auth',
-  standalone: true,
-  imports: [FormsModule],
+  selector: 'app-auth',imports: [FormsModule],
   templateUrl: './auth.component.html',
   styleUrl: './auth.component.css',
-  hostDirectives: [LogDirective]
+  hostDirectives: [LogDirective],
 })
 export class AuthComponent {
   email = signal('');
   password = signal('');
-  private authService = inject(AuthService);
-
-  onSubmit() {
+  private authService = inject(AuthService);onSubmit() {
     this.authService.authenticate(this.email(), this.password());
   }
 }

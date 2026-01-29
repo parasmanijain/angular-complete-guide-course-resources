@@ -5,9 +5,7 @@ import { UserInputComponent } from './user-input/user-input.component';
 import type { InvestmentInput } from './investment-input.model';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  templateUrl: './app.component.html',
+  selector: 'app-root',templateUrl: './app.component.html',
   imports: [HeaderComponent, UserInputComponent],
 })
 export class AppComponent {
@@ -15,9 +13,7 @@ export class AppComponent {
     const { initialInvestment, annualInvestment, expectedReturn, duration } =
       data;
     const annualData = [];
-    let investmentValue = initialInvestment;
-
-    for (let i = 0; i < duration; i++) {
+    let investmentValue = initialInvestment;  for (let i = 0; i < duration; i++) {
       const year = i + 1;
       const interestEarnedInYear = investmentValue * (expectedReturn / 100);
       investmentValue += interestEarnedInYear + annualInvestment;
@@ -31,8 +27,6 @@ export class AppComponent {
         totalInterest: totalInterest,
         totalAmountInvested: initialInvestment + annualInvestment * year,
       });
-    }
-
-    console.log(annualData);
+    }  console.log(annualData);
   }
 }

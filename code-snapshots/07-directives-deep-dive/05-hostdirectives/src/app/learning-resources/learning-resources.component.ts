@@ -6,8 +6,6 @@ import { LogDirective } from '../log.directive';
 @Component({
   selector: 'app-learning-resources',
   templateUrl: './learning-resources.component.html',
-  styleUrl: './learning-resources.component.css',
-  standalone: true,
-  imports: [SafeLinkDirective, LogDirective]
+  styleUrl: './learning-resources.component.css',imports: [SafeLinkDirective, LogDirective],
 })
 export class LearningResourcesComponent {}

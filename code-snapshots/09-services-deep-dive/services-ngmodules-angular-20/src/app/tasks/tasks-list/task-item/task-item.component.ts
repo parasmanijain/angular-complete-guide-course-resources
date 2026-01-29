@@ -24,12 +24,8 @@ export class TaskItemComponent {
       default:
         return 'Open';
     }
-  });
-
-  onChangeTaskStatus(taskId: string, status: string) {
-    let newStatus: TaskStatus = 'OPEN';
-
-    switch (status) {
+  });onChangeTaskStatus(taskId: string, status: string) {
+    let newStatus: TaskStatus = 'OPEN';  switch (status) {
       case 'open':
         newStatus = 'OPEN';
         break;
@@ -41,8 +37,6 @@ export class TaskItemComponent {
         break;
       default:
         break;
-    }
-
-    this.tasksService.updateTaskStatus(taskId, newStatus);
+    }  this.tasksService.updateTaskStatus(taskId, newStatus);
   }
 }

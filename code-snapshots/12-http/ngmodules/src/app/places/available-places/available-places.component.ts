@@ -14,11 +14,7 @@ export class AvailablePlacesComponent implements OnInit {
   isFetching = signal(false);
   error = signal('');
   private placesService = inject(PlacesService);
-  private destroyRef = inject(DestroyRef);
-
-  // constructor(private httpClient: HttpClient) {}
-
-  ngOnInit() {
+  private destroyRef = inject(DestroyRef);// constructor(private httpClient: HttpClient) {}ngOnInit() {
     this.isFetching.set(true);
     const subscription = this.placesService.loadAvailablePlaces().subscribe({
       next: (places) => {
@@ -30,21 +26,15 @@ export class AvailablePlacesComponent implements OnInit {
       complete: () => {
         this.isFetching.set(false);
       },
-    });
-
-    this.destroyRef.onDestroy(() => {
+    });  this.destroyRef.onDestroy(() => {
       subscription.unsubscribe();
     });
-  }
-
-  onSelectPlace(selectedPlace: Place) {
+  }onSelectPlace(selectedPlace: Place) {
     const subscription = this.placesService
       .addPlaceToUserPlaces(selectedPlace)
       .subscribe({
         next: (resData) => console.log(resData),
-      });
-
-    this.destroyRef.onDestroy(() => {
+      });  this.destroyRef.onDestroy(() => {
       subscription.unsubscribe();
     });
   }
