@@ -4,9 +4,10 @@ import { Place } from '../place.model';
 import { PlacesService } from '../places.service';
 
 @Component({
-  selector: 'app-available-places',
-  templateUrl: './available-places.component.html',
-  styleUrl: './available-places.component.css',
+    selector: 'app-available-places',
+    templateUrl: './available-places.component.html',
+    styleUrl: './available-places.component.css',
+    standalone: false
 })
 export class AvailablePlacesComponent implements OnInit {
   places = signal<Place[] | undefined>(undefined);
