@@ -1,4 +1,8 @@
-import { InjectionToken, NgModule } from '@angular/core';
+import {
+  InjectionToken,
+  NgModule,
+  provideZoneChangeDetection,
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -22,6 +26,9 @@ export const TasksServiceToken = new InjectionToken<TasksService>(
   ],
   imports: [BrowserModule, FormsModule],
   bootstrap: [AppComponent],
-  providers: [{ provide: TasksServiceToken, useClass: TasksService }],
+  providers: [
+    { provide: TasksServiceToken, useClass: TasksService },
+    provideZoneChangeDetection(),
+  ],
 })
 export class AppModule {}
