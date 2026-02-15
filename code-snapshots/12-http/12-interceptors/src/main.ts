@@ -1,3 +1,4 @@
+import { provideZoneChangeDetection } from "@angular/core";
 import { bootstrapApplication } from '@angular/platform-browser';
 import {
   HttpEventType,
@@ -33,5 +34,5 @@ function loggingInterceptor(
 }
 
 bootstrapApplication(AppComponent, {
-  providers: [provideHttpClient(withInterceptors([loggingInterceptor]))],
+  providers: [provideZoneChangeDetection(),provideHttpClient(withInterceptors([loggingInterceptor]))],
 }).catch((err) => console.error(err));
