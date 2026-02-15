@@ -1,12 +1,10 @@
 import fs from "node:fs/promises";
-
-import bodyParser from "body-parser";
-import express from "express";
+import express, { json, static as express_static } from "express";
 
 const app = express();
 
-app.use(express.static("images"));
-app.use(bodyParser.json());
+app.use(express_static("images"));
+app.use(json());
 
 // CORS
 
