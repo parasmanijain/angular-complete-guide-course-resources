@@ -12,7 +12,7 @@ import { MessagesService } from '../messages.service';
 @Component({
   selector: 'app-messages-list',
   templateUrl: './messages-list.component.html',
-  styleUrl: './messages-list.component.css',
+  styleUrl: './messages-list.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MessagesListComponent implements OnInit {

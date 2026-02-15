@@ -15,7 +15,7 @@ import { TasksServiceToken } from '../../../main';
   
   imports: [FormsModule],
   templateUrl: './new-task.component.html',
-  styleUrl: './new-task.component.css',
+  styleUrl: './new-task.component.scss',
 })
 export class NewTaskComponent {
   @ViewChild('form') private formEl?: ElementRef<HTMLFormElement>;constructor(@Inject(TasksServiceToken) private tasksService: TasksService) {}onAddTask(title: string, description: string) {

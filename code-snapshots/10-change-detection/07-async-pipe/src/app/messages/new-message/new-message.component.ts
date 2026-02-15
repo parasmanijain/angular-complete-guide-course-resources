@@ -12,7 +12,7 @@ import { MessagesService } from '../messages.service';
   selector: 'app-new-message',
   imports: [FormsModule],
   templateUrl: './new-message.component.html',
-  styleUrl: './new-message.component.css',
+  styleUrl: './new-message.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NewMessageComponent {

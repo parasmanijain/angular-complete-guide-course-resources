@@ -6,7 +6,7 @@ import { UsersService } from '../users.service';
   selector: 'app-user-tasks',
   
   templateUrl: './user-tasks.component.html',
-  styleUrl: './user-tasks.component.css',
+  styleUrl: './user-tasks.component.scss',
 })
 export class UserTasksComponent {
   userId = input.required<string>();

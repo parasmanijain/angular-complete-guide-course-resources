@@ -7,7 +7,7 @@ import { CardComponent } from '../../shared/card/card.component';
 @Component({
   selector: 'app-task',
   templateUrl: './task.component.html',
-  styleUrl: './task.component.css',
+  styleUrl: './task.component.scss',
   imports: [CardComponent, DatePipe],
 })
 export class TaskComponent {

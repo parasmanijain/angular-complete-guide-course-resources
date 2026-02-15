@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-task',
   imports: [],
   templateUrl: './task.component.html',
-  styleUrl: './task.component.css',
+  styleUrl: './task.component.scss',
 })
 export class TaskComponent {}

@@ -9,7 +9,7 @@ import { TasksService } from '../tasks.service';
   
   imports: [FormsModule, RouterLink],
   templateUrl: './new-task.component.html',
-  styleUrl: './new-task.component.css',
+  styleUrl: './new-task.component.scss',
 })
 export class NewTaskComponent {
   userId = input.required<string>();

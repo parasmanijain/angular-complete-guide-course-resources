@@ -6,7 +6,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
   selector: 'app-root',
   
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrl: './app.component.scss',
   imports: [WelcomeComponent],
 })
 export class AppComponent {}

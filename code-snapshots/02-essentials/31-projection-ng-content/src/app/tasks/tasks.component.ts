@@ -7,7 +7,7 @@ import { type NewTaskData } from './task/task.model';
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
-  styleUrl: './tasks.component.css',
+  styleUrl: './tasks.component.scss',
   imports: [TaskComponent, NewTaskComponent],
 })
 export class TasksComponent {

@@ -6,7 +6,7 @@ import { PlacesService } from '../places.service';
 @Component({
   selector: 'app-user-places',
   templateUrl: './user-places.component.html',
-  styleUrl: './user-places.component.css',
+  styleUrl: './user-places.component.scss',
   standalone: false,
 })
 export class UserPlacesComponent implements OnInit {

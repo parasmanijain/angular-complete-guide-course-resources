@@ -10,7 +10,7 @@ import { TasksService } from '../tasks.service';
   selector: 'app-task',
 
   templateUrl: './task.component.html',
-  styleUrl: './task.component.css',
+  styleUrl: './task.component.scss',
   imports: [DatePipe, CardComponent],
 })
 export class TaskComponent {

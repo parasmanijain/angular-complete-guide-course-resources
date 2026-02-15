@@ -7,7 +7,7 @@ import { UserPlacesComponent } from './places/user-places/user-places.component'
   selector: 'app-root',
   
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrl: './app.component.scss',
   imports: [AvailablePlacesComponent, UserPlacesComponent],
 })
 export class AppComponent {}

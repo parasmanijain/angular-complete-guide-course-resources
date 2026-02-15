@@ -9,7 +9,7 @@ const OFFER_TIME = 30;
   
   imports: [AsyncPipe],
   templateUrl: './offer-preview.component.html',
-  styleUrl: './offer-preview.component.css',
+  styleUrl: './offer-preview.component.scss',
 })
 export class OfferPreviewComponent {
   offerExpired = signal(false);

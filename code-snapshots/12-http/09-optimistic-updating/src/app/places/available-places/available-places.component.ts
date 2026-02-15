@@ -9,7 +9,7 @@ import { PlacesService } from '../places.service';
   selector: 'app-available-places',
   
   templateUrl: './available-places.component.html',
-  styleUrl: './available-places.component.css',
+  styleUrl: './available-places.component.scss',
   imports: [PlacesComponent, PlacesContainerComponent],
 })
 export class AvailablePlacesComponent implements OnInit {

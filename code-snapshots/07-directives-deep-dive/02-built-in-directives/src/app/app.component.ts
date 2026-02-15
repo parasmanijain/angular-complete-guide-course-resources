@@ -6,7 +6,7 @@ import { AuthService } from './auth/auth.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrl: './app.component.scss',
   imports: [AuthComponent, LearningResourcesComponent],
 })
 export class AppComponent {

@@ -4,7 +4,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   selector: 'app-rect',
   imports: [],
   templateUrl: './rect.component.html',
-  styleUrl: './rect.component.css',
+  styleUrl: './rect.component.scss',
 })
 export class RectComponent {
   // Todo: Implement custom two-way binding

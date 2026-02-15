@@ -6,7 +6,7 @@ import { AuthService } from './auth.service';
 @Component({
   selector: 'app-auth',imports: [FormsModule],
   templateUrl: './auth.component.html',
-  styleUrl: './auth.component.css',
+  styleUrl: './auth.component.scss',
 })
 export class AuthComponent {
   email = signal('');

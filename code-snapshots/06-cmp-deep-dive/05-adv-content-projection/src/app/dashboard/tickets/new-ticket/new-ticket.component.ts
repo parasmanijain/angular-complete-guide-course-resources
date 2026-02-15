@@ -7,7 +7,7 @@ import { ButtonComponent } from '../../../shared/button/button.component';
   
   imports: [ButtonComponent],
   templateUrl: './new-ticket.component.html',
-  styleUrl: './new-ticket.component.css'
+  styleUrl: './new-ticket.component.scss'
 })
 export class NewTicketComponent {
 

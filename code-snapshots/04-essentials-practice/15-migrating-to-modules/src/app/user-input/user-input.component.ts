@@ -5,7 +5,7 @@ import { InvestmentService } from '../investment.service';
 @Component({
   selector: 'app-user-input',
   templateUrl: './user-input.component.html',
-  styleUrl: './user-input.component.css',
+  styleUrl: './user-input.component.scss',
   standalone: false,
 })
 export class UserInputComponent {

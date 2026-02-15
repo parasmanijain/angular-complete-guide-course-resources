@@ -7,7 +7,7 @@ import { Task } from './task/task.model';
   selector: 'app-tasks',
   
   templateUrl: './tasks.component.html',
-  styleUrl: './tasks.component.css',
+  styleUrl: './tasks.component.scss',
   imports: [TaskComponent],
 })
 export class TasksComponent {

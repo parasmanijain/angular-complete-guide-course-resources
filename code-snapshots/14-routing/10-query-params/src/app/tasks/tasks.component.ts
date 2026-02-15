@@ -13,9 +13,9 @@ import { TasksService } from './tasks.service';
 
 @Component({
   selector: 'app-tasks',
-  
+
   templateUrl: './tasks.component.html',
-  styleUrl: './tasks.component.css',
+  styleUrl: './tasks.component.scss',
   imports: [TaskComponent, RouterLink],
 })
 export class TasksComponent implements OnInit {
@@ -24,12 +24,16 @@ export class TasksComponent implements OnInit {
   order?: 'asc' | 'desc';
   private tasksService = inject(TasksService);
   userTasks = computed(() =>
-    this.tasksService.allTasks().filter((task) => task.userId === this.userId())
+    this.tasksService
+      .allTasks()
+      .filter((task) => task.userId === this.userId()),
   );
   private activatedRoute = inject(ActivatedRoute);
-  private destroyRef = inject(DestroyRef);ngOnInit(): void {
+  private destroyRef = inject(DestroyRef);
+  ngOnInit(): void {
     const subscription = this.activatedRoute.queryParams.subscribe({
       next: (params) => (this.order = params['order']),
-    });  this.destroyRef.onDestroy(() => subscription.unsubscribe());
+    });
+    this.destroyRef.onDestroy(() => subscription.unsubscribe());
   }
 }

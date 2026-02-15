@@ -5,7 +5,7 @@ import { AfterViewInit, Component, ElementRef, viewChild } from '@angular/core';
   
   imports: [],
   templateUrl: './modal.component.html',
-  styleUrl: './modal.component.css'
+  styleUrl: './modal.component.scss'
 })
 export class ModalComponent implements AfterViewInit {
   private dialogEl = viewChild.required<ElementRef<HTMLDialogElement>>('dialog');ngAfterViewInit(): void {

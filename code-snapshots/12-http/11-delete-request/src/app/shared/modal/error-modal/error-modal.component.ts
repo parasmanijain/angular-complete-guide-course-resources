@@ -6,7 +6,7 @@ import { ErrorService } from '../../error.service';
   selector: 'app-error-modal',
 
   templateUrl: './error-modal.component.html',
-  styleUrl: './error-modal.component.css',
+  styleUrl: './error-modal.component.scss',
   imports: [ModalComponent],
 })
 export class ErrorModalComponent {

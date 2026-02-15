@@ -16,7 +16,7 @@ import {
   selector: 'app-lifecycle',
   imports: [],
   templateUrl: './lifecycle.component.html',
-  styleUrl: './lifecycle.component.css',
+  styleUrl: './lifecycle.component.scss',
 })
 export class LifecycleComponent
   implements

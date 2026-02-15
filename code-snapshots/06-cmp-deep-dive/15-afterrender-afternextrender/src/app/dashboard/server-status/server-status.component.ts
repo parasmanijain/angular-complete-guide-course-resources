@@ -5,7 +5,7 @@ import { Component, DestroyRef, OnDestroy, OnInit, inject } from '@angular/core'
   
   imports: [],
   templateUrl: './server-status.component.html',
-  styleUrl: './server-status.component.css',
+  styleUrl: './server-status.component.scss',
 })
 export class ServerStatusComponent implements OnInit {
   currentStatus: 'online' | 'offline' | 'unknown' = 'offline';

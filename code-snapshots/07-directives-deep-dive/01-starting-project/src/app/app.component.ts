@@ -5,7 +5,7 @@ import { LearningResourcesComponent } from './learning-resources/learning-resour
 
 @Component({
   selector: 'app-root',templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrl: './app.component.scss',
   imports: [AuthComponent, LearningResourcesComponent],
 })
 export class AppComponent {}

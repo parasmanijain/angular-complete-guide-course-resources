@@ -3,7 +3,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrl: './user.component.css',
+  styleUrl: './user.component.scss',
 })
 export class UserComponent {
   @Input({ required: true }) id!: string;

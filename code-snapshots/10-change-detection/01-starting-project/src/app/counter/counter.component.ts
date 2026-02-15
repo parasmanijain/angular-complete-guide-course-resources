@@ -5,7 +5,7 @@ import { InfoMessageComponent } from '../info-message/info-message.component';
 @Component({
   selector: 'app-counter',
   templateUrl: './counter.component.html',
-  styleUrl: './counter.component.css',
+  styleUrl: './counter.component.scss',
   imports: [InfoMessageComponent],
 })
 export class CounterComponent {

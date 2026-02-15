@@ -11,7 +11,7 @@ import {
   selector: 'app-signup',
   imports: [ReactiveFormsModule],
   templateUrl: './signup.component.html',
-  styleUrl: './signup.component.css',
+  styleUrl: './signup.component.scss',
 })
 export class SignupComponent {
   form = new FormGroup({

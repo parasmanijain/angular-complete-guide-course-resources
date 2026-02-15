@@ -6,7 +6,7 @@ import { TasksServiceToken } from '../../../app.module';
 @Component({
     selector: 'app-task-item',
     templateUrl: './task-item.component.html',
-    styleUrl: './task-item.component.css',
+    styleUrl: './task-item.component.scss',
     standalone: false
 })
 export class TaskItemComponent {

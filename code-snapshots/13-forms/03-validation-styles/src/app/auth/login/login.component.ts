@@ -5,7 +5,7 @@ import { FormsModule, NgForm } from '@angular/forms';
   selector: 'app-login',
   imports: [FormsModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css',
+  styleUrl: './login.component.scss',
 })
 export class LoginComponent {
   onSubmit(formData: NgForm) {

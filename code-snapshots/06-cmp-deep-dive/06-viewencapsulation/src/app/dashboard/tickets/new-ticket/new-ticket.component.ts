@@ -6,7 +6,7 @@ import { ControlComponent } from '../../../shared/control/control.component';
 @Component({
   selector: 'app-new-ticket',
   templateUrl: './new-ticket.component.html',
-  styleUrl: './new-ticket.component.css',
+  styleUrl: './new-ticket.component.scss',
   imports: [ButtonComponent, ControlComponent],
 })
 export class NewTicketComponent {}

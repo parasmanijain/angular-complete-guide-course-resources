@@ -11,7 +11,7 @@ import { PlacesService } from '../places.service';
   selector: 'app-user-places',
 
   templateUrl: './user-places.component.html',
-  styleUrl: './user-places.component.css',
+  styleUrl: './user-places.component.scss',
   imports: [PlacesContainerComponent, PlacesComponent],
 })
 export class UserPlacesComponent implements OnInit {

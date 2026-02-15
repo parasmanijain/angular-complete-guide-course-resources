@@ -7,7 +7,7 @@ import { AuthDirective } from './auth/auth.directive';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrl: './app.component.scss',
   imports: [AuthComponent, LearningResourcesComponent, AuthDirective],
 })
 export class AppComponent {

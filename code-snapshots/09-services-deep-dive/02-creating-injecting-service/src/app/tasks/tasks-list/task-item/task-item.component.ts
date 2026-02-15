@@ -8,7 +8,7 @@ import { Task, TaskStatus } from '../../task.model';
   
   imports: [FormsModule],
   templateUrl: './task-item.component.html',
-  styleUrl: './task-item.component.css',
+  styleUrl: './task-item.component.scss',
 })
 export class TaskItemComponent {
   task = input.required<Task>();

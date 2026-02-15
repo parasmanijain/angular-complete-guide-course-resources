@@ -4,7 +4,7 @@ import { ButtonComponent } from '../shared/button/button.component';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css',
+  styleUrl: './header.component.scss',
   imports: [ButtonComponent],
 })
 export class HeaderComponent {}

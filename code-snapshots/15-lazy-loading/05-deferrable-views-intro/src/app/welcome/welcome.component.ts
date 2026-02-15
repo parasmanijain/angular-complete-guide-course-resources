@@ -6,7 +6,7 @@ import { OfferPreviewComponent } from '../offer-preview/offer-preview.component'
   selector: 'app-welcome',
   
   templateUrl: './welcome.component.html',
-  styleUrl: './welcome.component.css',
+  styleUrl: './welcome.component.scss',
   imports: [OfferPreviewComponent],
 })
 export class WelcomeComponent {}

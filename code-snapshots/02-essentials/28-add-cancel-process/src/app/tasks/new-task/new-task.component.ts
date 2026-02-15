@@ -4,7 +4,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   selector: 'app-new-task',
   imports: [],
   templateUrl: './new-task.component.html',
-  styleUrl: './new-task.component.css',
+  styleUrl: './new-task.component.scss',
 })
 export class NewTaskComponent {
   @Output() cancel = new EventEmitter<void>();

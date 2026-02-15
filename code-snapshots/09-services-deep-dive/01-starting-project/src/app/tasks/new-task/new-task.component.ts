@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
   
   imports: [FormsModule],
   templateUrl: './new-task.component.html',
-  styleUrl: './new-task.component.css',
+  styleUrl: './new-task.component.scss',
 })
 export class NewTaskComponent {
   private formEl = viewChild<ElementRef<HTMLFormElement>>('form');onAddTask(title: string, description: string) {

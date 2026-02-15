@@ -6,7 +6,7 @@ import { Ticket } from '../ticket.model';
   selector: 'app-ticket',
   imports: [],
   templateUrl: './ticket.component.html',
-  styleUrl: './ticket.component.css',
+  styleUrl: './ticket.component.scss',
 })
 export class TicketComponent {
   data = input.required<Ticket>();

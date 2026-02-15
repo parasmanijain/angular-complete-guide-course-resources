@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   
   imports: [],
   templateUrl: './new-ticket.component.html',
-  styleUrl: './new-ticket.component.css'
+  styleUrl: './new-ticket.component.scss'
 })
 export class NewTicketComponent {
 

@@ -7,7 +7,7 @@ import { TasksService } from '../tasks.service';
   selector: 'app-tasks-list',
   
   templateUrl: './tasks-list.component.html',
-  styleUrl: './tasks-list.component.css',
+  styleUrl: './tasks-list.component.scss',
   imports: [TaskItemComponent],
 })
 export class TasksListComponent {

@@ -5,7 +5,7 @@ import { Component, Input, input } from '@angular/core';
   
   imports: [],
   templateUrl: './dashboard-item.component.html',
-  styleUrl: './dashboard-item.component.css',
+  styleUrl: './dashboard-item.component.scss',
   // host: {
   //   class: 'dashboard-item',
   // }

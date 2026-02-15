@@ -5,9 +5,9 @@ import { UsersService } from './users.service';
 
 @Component({
   selector: 'app-users',
-  
+
   templateUrl: './users.component.html',
-  styleUrl: './users.component.css',
+  styleUrl: './users.component.scss',
   imports: [UserComponent],
 })
 export class UsersComponent {

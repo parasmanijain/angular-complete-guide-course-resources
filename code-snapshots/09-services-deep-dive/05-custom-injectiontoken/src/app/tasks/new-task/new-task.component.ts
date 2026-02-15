@@ -9,7 +9,7 @@ import { TasksServiceToken } from '../../../main';
   
   imports: [FormsModule],
   templateUrl: './new-task.component.html',
-  styleUrl: './new-task.component.css',
+  styleUrl: './new-task.component.scss',
 })
 export class NewTaskComponent {
   private formEl = viewChild<ElementRef<HTMLFormElement>>('form');constructor(@Inject(TasksServiceToken) private tasksService: TasksService) {}onAddTask(title: string, description: string) {

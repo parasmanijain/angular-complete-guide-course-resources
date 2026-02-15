@@ -5,7 +5,7 @@ import { Place } from './place.model';
 @Component({
   selector: 'app-places',
   templateUrl: './places.component.html',
-  styleUrl: './places.component.css',
+  styleUrl: './places.component.scss',
   standalone: false,
 })
 export class PlacesComponent {

@@ -11,7 +11,7 @@ import {
 @Component({
   selector: 'app-server-status',imports: [],
   templateUrl: './server-status.component.html',
-  styleUrl: './server-status.component.css',
+  styleUrl: './server-status.component.scss',
 })
 export class ServerStatusComponent implements OnInit {
   currentStatus = signal<'online' | 'offline' | 'unknown'>('offline');

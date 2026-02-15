@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   
   imports: [],
   templateUrl: './traffic.component.html',
-  styleUrl: './traffic.component.css'
+  styleUrl: './traffic.component.scss'
 })
 export class TrafficComponent {
   dummyTrafficData = [

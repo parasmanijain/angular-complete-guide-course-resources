@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-new-message',
   imports: [FormsModule],
   templateUrl: './new-message.component.html',
-  styleUrl: './new-message.component.css',
+  styleUrl: './new-message.component.scss',
 })
 export class NewMessageComponent {
   add = output<string>();

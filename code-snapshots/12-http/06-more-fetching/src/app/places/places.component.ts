@@ -7,7 +7,7 @@ import { Place } from './place.model';
 
   imports: [],
   templateUrl: './places.component.html',
-  styleUrl: './places.component.css',
+  styleUrl: './places.component.scss',
 })
 export class PlacesComponent {
   places = input.required<Place[]>();

@@ -5,7 +5,7 @@ import { type User } from './user.model';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrl: './user.component.css',
+  styleUrl: './user.component.scss',
 })
 export class UserComponent {
   @Input({ required: true }) user!: User;

@@ -8,7 +8,7 @@ import { TASK_STATUS_OPTIONS, taskStatusOptionsProvider } from '../task.model';
   selector: 'app-tasks-list',
   
   templateUrl: './tasks-list.component.html',
-  styleUrl: './tasks-list.component.css',
+  styleUrl: './tasks-list.component.scss',
   imports: [TaskItemComponent],
   providers: [taskStatusOptionsProvider],
 })

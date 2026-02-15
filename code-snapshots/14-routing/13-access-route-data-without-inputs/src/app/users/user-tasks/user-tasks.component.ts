@@ -12,10 +12,10 @@ import { UsersService } from '../users.service';
 
 @Component({
   selector: 'app-user-tasks',
-  
+
   imports: [RouterOutlet, RouterLink],
   templateUrl: './user-tasks.component.html',
-  styleUrl: './user-tasks.component.css',
+  styleUrl: './user-tasks.component.scss',
 })
 export class UserTasksComponent {
   userName = input.required<string>();
@@ -31,12 +31,12 @@ export class UserTasksComponent {
 
 export const resolveUserName: ResolveFn<string> = (
   activatedRoute: ActivatedRouteSnapshot,
-  routerState: RouterStateSnapshot
+  routerState: RouterStateSnapshot,
 ) => {
   const usersService = inject(UsersService);
   const userName =
     usersService.users.find(
-      (u) => u.id === activatedRoute.paramMap.get('userId')
+      (u) => u.id === activatedRoute.paramMap.get('userId'),
     )?.name || '';
   return userName;
 };

@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   
   imports: [],
   templateUrl: './rect.component.html',
-  styleUrl: './rect.component.css',
+  styleUrl: './rect.component.scss',
 })
 export class RectComponent {
   // Todo: Implement custom two-way bindingonReset() {

@@ -12,7 +12,7 @@ import { debounceTime } from 'rxjs';
   selector: 'app-login',
   imports: [FormsModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css',
+  styleUrl: './login.component.scss',
 })
 export class LoginComponent {
   private form = viewChild.required<NgForm>('form');

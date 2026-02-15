@@ -6,9 +6,9 @@ import { UsersComponent } from './users/users.component';
 
 @Component({
   selector: 'app-root',
-  
+
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrl: './app.component.scss',
   imports: [HeaderComponent, UsersComponent, RouterOutlet],
 })
 export class AppComponent {}

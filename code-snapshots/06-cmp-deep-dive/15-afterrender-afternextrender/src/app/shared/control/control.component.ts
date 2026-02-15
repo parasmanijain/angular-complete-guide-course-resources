@@ -18,7 +18,7 @@ import {
 
   imports: [],
   templateUrl: './control.component.html',
-  styleUrl: './control.component.css',
+  styleUrl: './control.component.scss',
   encapsulation: ViewEncapsulation.None,
   host: {
     class: 'control',
