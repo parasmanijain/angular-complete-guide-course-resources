@@ -1,7 +1,6 @@
-import { NgModule } from '@angular/core';
+import { NgModule, provideZoneChangeDetection } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { UserTasksComponent } from './users/user-tasks/user-tasks.component';
@@ -31,5 +30,6 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   bootstrap: [AppComponent],
+  providers: [provideZoneChangeDetection()],
 })
 export class AppModule {}
