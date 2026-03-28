@@ -8,5 +8,6 @@ import { UserComponent } from './user/user.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   imports: [HeaderComponent, UserComponent],
+  standalone: true,
 })
 export class AppComponent {}
