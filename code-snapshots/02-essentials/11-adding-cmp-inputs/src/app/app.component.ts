@@ -9,6 +9,7 @@ import { DUMMY_USERS } from './dummy-users';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   imports: [HeaderComponent, UserComponent],
+  standalone: true,
 })
 export class AppComponent {
   users = DUMMY_USERS;
