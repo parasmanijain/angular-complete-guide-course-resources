@@ -7,6 +7,7 @@ const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrl: './user.component.scss',
+  standalone: true,
 })
 export class UserComponent {
   selectedUser = signal(DUMMY_USERS[randomIndex]);
