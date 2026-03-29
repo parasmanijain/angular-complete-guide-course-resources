@@ -8,6 +8,7 @@ import { TasksComponent } from './tasks/tasks.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   imports: [HeaderComponent, UserComponent, TasksComponent, NgFor, NgIf],
