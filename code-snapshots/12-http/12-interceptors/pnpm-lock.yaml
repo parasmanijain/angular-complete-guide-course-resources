@@ -54,6 +54,9 @@ importers:
       '@types/jasmine':
         specifier: ~6.0.0
         version: 6.0.0
+      '@types/node':
+        specifier: ^25.5.0
+        version: 25.5.0
       jasmine-core:
         specifier: ~6.1.0
         version: 6.1.0
@@ -81,6 +84,10 @@ importers:
       express:
         specifier: ^5.2.1
         version: 5.2.1
+    devDependencies:
+      '@types/node':
+        specifier: ^25.5.0
+        version: 25.5.0
 
 packages:
 
