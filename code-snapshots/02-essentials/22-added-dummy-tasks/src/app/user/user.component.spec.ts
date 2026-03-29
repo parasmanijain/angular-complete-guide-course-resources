@@ -13,11 +13,10 @@ describe('UserComponent', () => {
 
     fixture = TestBed.createComponent(UserComponent);
     component = fixture.componentInstance;
-    
+
     // Set required input properties for testing
     component.user = DUMMY_USERS[0];
-    component.selected = false;
-    
+
     fixture.detectChanges();
   });
 

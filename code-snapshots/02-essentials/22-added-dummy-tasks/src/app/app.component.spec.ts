@@ -14,16 +14,17 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should have the essentials title', () => {
+  it('should have users array', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('essentials');
+    expect(app.users).toBeDefined();
+    expect(app.users.length).toBeGreaterThan(0);
   });
 
-  it('should render title', () => {
+  it('should handle user selection', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, essentials');
+    const app = fixture.componentInstance;
+    app.onSelectUser('u1');
+    expect(app.selectedUserId).toEqual('u1');
   });
 });

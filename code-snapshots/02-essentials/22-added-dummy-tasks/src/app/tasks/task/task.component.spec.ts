@@ -12,16 +12,7 @@ describe('TaskComponent', () => {
 
     fixture = TestBed.createComponent(TaskComponent);
     component = fixture.componentInstance;
-    
-    // Set required input properties for testing
-    component.task = {
-      id: 't1',
-      userId: 'u1',
-      title: 'Test Task',
-      summary: 'Test task summary',
-      dueDate: '2024-12-31'
-    };
-    
+
     fixture.detectChanges();
   });
 
